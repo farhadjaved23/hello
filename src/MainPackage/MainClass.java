@@ -71,17 +71,19 @@ public class MainClass {
 		//logoutobj.Logout();
 		web.get("https://demo.opencart.com/index.php?route=account/register");
 		register reg=new register(web);
-		reg.register("ali", "shah", "shah122233@gmail.com", "0321456789", "123456789", "123456789");
+		reg.register("ali", "shah", "shahji@gmail.com", "0321456789", "123456789", "123456789");
 		System.out.print("");
 		
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		
 		web.get("https://demo.opencart.com/index.php?route=account/login");
 		
 		String mail="";
-		mail=reg.email.getText();
+		mail=reg.email.toString();
+		System.out.println(mail);
+		Thread.sleep(2000);
 		String pwd="";
-		pwd=reg.pwd.getText();
+		pwd=reg.pwd.toString();
 		Thread.sleep(2000);
 		Login loginobj=new Login(web);
 		loginobj.Log(mail, pwd);
