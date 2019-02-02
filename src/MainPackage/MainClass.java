@@ -72,7 +72,7 @@ public class MainClass {
 		web.get("https://demo.opencart.com/index.php?route=account/register");
 		register reg=new register(web);
 		reg.register("ali", "shah", "shah122233@gmail.com", "0321456789", "123456789", "123456789");
-		
+		System.out.print("");
 		
 		Thread.sleep(5000);
 		
